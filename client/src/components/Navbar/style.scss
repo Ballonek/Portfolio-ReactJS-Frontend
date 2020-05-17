@@ -1,0 +1,32 @@
+.navbar {
+    position: fixed;
+    width: 100%;
+    z-index: 2000;
+    font-family: 'Doppio One';
+    background: linear-gradient( rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7) ) !important;
+    height: 3rem;
+
+    &-flex {
+        justify-content: flex-end;
+        ul {
+            li {
+                a { 
+                    color: #FCFCFC !important;
+                    transition: all 300ms ease-in;
+                    &:hover {
+                        color: #690f0f !important;
+                    }
+                }
+            }
+            .nav-social {
+                display: flex;
+            }
+        }
+    }
+
+    h1{
+        a{
+            font-size: 1.5rem;
+        }
+    }   
+}

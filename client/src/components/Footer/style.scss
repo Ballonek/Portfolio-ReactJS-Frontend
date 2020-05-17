@@ -1,0 +1,31 @@
+footer {
+    padding: 2rem 0;
+    background: #242424;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-self: center;
+    
+    .container {
+        display: flex;
+        flex-direction: column;
+        justify-self: center;
+        align-items: center;
+    }
+
+    .social {
+        display: flex;
+        flex-direction: row;
+        min-width: 200px;
+        justify-content: space-evenly;
+        svg {
+            font-size: 30px;
+            color: #FCFCFC;
+            transition: all 100ms ease-in;
+            
+            &:hover {
+                color: #690f0f;
+            }
+        }
+    }
+}
