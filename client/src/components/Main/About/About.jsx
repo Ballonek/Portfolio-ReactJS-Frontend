@@ -1,13 +1,15 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Container, Card, CardText, CardTitle } from 'reactstrap';
 import './style.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCss3, faWordpressSimple, faNodeJs, faReact } from '@fortawesome/free-brands-svg-icons';
 import { faHeadset } from '@fortawesome/free-solid-svg-icons';
 
+
 const About = () => {
+
     return (
-        <section id="about" className="about">
+        <section data-aos='slide-left' id="about" className="about">
             <Container className="about-container">
                 <h3>About me</h3>
                 <div className="about-content">

@@ -6,9 +6,9 @@ import { faFacebookF, faLinkedinIn, faGithub } from '@fortawesome/free-brands-sv
 
 const Footer = () => {
     return (
-    <footer>
+    <footer data-aos='slide-right' data-aos-dutation='3000'>
         <Container>
-            <div className="social">
+            <div className="social" data-aos='fade-left'>
                 <NavLink href="https://www.facebook.com/dominik.micek.1/"><FontAwesomeIcon icon={faFacebookF} /></NavLink>
                 <NavLink href="https://www.linkedin.com/in/dominik-m%C3%AD%C4%8Dek-77b160151/"><FontAwesomeIcon icon={faLinkedinIn} /></NavLink>
                 <NavLink href="https://github.com/Ballonek/"><FontAwesomeIcon icon={faGithub} /></NavLink>

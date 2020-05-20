@@ -1,11 +1,13 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import {Container} from 'reactstrap'
 import { Profile } from '../../../assets/Images';
 import './style.scss';
 
+
+
 const Contact = () => {
     return (
-        <section id='contact' className='contact'>
+        <section data-aos='slide-left' id='contact' className='contact'>
             <Container>
                 <h3>Contact</h3>
                 <div className="contact-container">
