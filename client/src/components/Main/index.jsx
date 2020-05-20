@@ -3,12 +3,12 @@ import About from './About/About'
 import Portfolio from './Portfolio/Portfolio';
 import Contact from './Contact/Contact'
 
-const Main = () => {
+const Main = ({ main }) => {
     return (
         <main>
-            <About />
-            <Portfolio />
-            <Contact />
+            <About about={main[0]}/>
+            <Portfolio refs={main[1]} />
+            <Contact contact={main[2]} />
         </main>
     );
 }

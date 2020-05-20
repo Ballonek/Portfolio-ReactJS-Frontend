@@ -1,26 +1,31 @@
-import React, { useEffect } from 'react';
-import { useDispatch } from 'react-redux';
+import React, { useEffect, useState} from 'react';
+import { useDispatch, useSelector } from 'react-redux';
 import './App.scss';
 
+import {Spinner} from 'reactstrap'
+
 import { PageNavbar, Header, Main, Footer } from './components';
-import Aos from 'aos';
-import 'aos/dist/aos.css';
-import { loadPage } from './actions/cmsActions';
+import { loadPage, loadPageWithLanguage } from './actions/cmsActions';
 
   
 function App() {
+  const [lang, setLang] = useState('en');
   const dispatch = useDispatch();
+  const [langs, setLangs] = useState([]);
 
-  useEffect(() => {
-    Aos.init({ duration: 3000 });
-    dispatch(loadPage());
-  }, [dispatch]);
-    
+  useEffect(() => {   
+      dispatch(loadPageWithLanguage(lang));
+  }, [dispatch, lang]);
+
+  const body = useSelector(state => state.cms.body)
+
+
+
   return (
     <div className="App">
-      <PageNavbar />
+      <PageNavbar nav={body.nav} lang={lang} setLang={setLang} />
       <Header />
-      <Main />
+      <Main main={body.sections} />
       <Footer />
     </div>
   );
